@@ -1,26 +1,38 @@
 import React, {useState} from 'react';
 import './App.css';
 import Footer from './components/Footer';
+import Page from './components/Page';
 
 function App() {
+  const [pages] = useState([
+    { name: 'About Me'},
+    { name: 'Portfolio'},
+    { name: 'Contact'},
+    { name: 'Resume'},
+  ]);
+  const [currentPage, setCurrentPage] = useState(pages[0]);
+  const [pageSelected, setPageSelected] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div> pages={pages} 
+    setCurrentPage={setCurrentPage}
+    currentPage={currentPage}
+    pageSelected={pageSelected}
+    setPageSelected={setPageSelected}
+    <section className="hero">
+        <div className="hero-name">
+          <p>Jonathan Borroel</p>
+          <div className="hero-text">
+            <p>Web Developer</p>
+          </div>
+        </div>
+      </section>
+      <main>
+        <Page currentPage={currentPage} />
+      </main>
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
