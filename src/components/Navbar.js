@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar (props) {
+function Navbar(props) {
     const { pages = [], setCurrentPage, currentPage } = props;
 
     return (
