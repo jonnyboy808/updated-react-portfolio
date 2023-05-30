@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Footer from './components/Footer';
 import Page from './components/Page';
+import Main from './components/Main';
 
 function App() {
   const [pages] = useState([
@@ -14,11 +15,12 @@ function App() {
   const [pageSelected, setPageSelected] = useState(false);
 
   return (
-    <div> pages={pages} 
+    <div>
+      <Main pages={pages} 
     setCurrentPage={setCurrentPage}
     currentPage={currentPage}
     pageSelected={pageSelected}
-    setPageSelected={setPageSelected}
+    setPageSelected={setPageSelected}/>
     <section className="hero">
         <div className="hero-name">
           <p>Jonathan Borroel</p>
