@@ -7,11 +7,11 @@ function Resume() {
       <div>
         <h2>Skills</h2>
         <ul className="section-content">
-          <li>HTML</li>
           <li>React</li>
           <li>Javascript</li>
           <li>Node.js</li>
           <li>MySQL</li>
+          <li>HTML</li>
           <li>Heroku</li>
           <li>Git</li>
           <li>CSS</li>
@@ -19,7 +19,6 @@ function Resume() {
           <li>Insomnia</li>
           <li>MongoDB</li>
           <li>GitHub</li>
-          <li>VS Code</li>
         </ul>
       </div>
       <div>
