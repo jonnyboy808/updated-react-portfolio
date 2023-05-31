@@ -1,41 +1,46 @@
+// SOURCE: Material UI Docs for Responsive App Bar with Drawer
+// https://mui.com/material-ui/react-app-bar/#responsive-app-bar-with-drawer
+
 import React from "react";
 import Navbar from "./Navbar";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
+import Typography from "@mui/material/Typography";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import AppBar from "@mui/material/AppBar";
 import MenuIcon from "@mui/icons-material/MenuRounded";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-const drawerWidth = 240;
+const drawerWidth = 190;
 
+// set up for  appbar 
 function Main(props) {
-    const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
-    const {
-      pages = [],
-      setCurrentPage,
-      currentPage,
-    } = props;
-  
-    const handleDrawerToggle = () => {
-      setMobileOpen(!mobileOpen);
-    };
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { pages = [], setCurrentPage, currentPage } = props;
 
-    const drawer = (
-        <Box
-        >
-             <Typography variant="h6" sx={{ my: 2, fontWeight: "bold" }}>
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  // Navbar 
+  const drawer = (
+    <Box
+      onClick={handleDrawerToggle}
+      // pop back navbar menu
+      sx={{
+        textAlign: "center",
+        backgroundColor: "black",
+      }}
+    >
+      <Typography variant="h6" sx={{ my: 2, fontWeight: "bold" }}>
         MENU
       </Typography>
-      <Divider sx={{ backgroundColor: 'white' }} />
-      <List sx={{ textAlign: "center"}}>
+      <List sx={{ textAlign: "center" }}>
         <ListItem>
           <ListItemButton>
             <Navbar
@@ -50,43 +55,43 @@ function Main(props) {
   );
 
   const container =
-  window !== undefined ? () => window().document.body : undefined;
+    window !== undefined ? () => window().document.body : undefined;
 
+  // Navbar styling
   return (
     <Box posistion="fixed">
-      <AppBar component="Navbar" elevation={0} sx={{ backgroundColor: "black" }}>
+      <AppBar
+        component="Navbar"
+        elevation={0}
+        sx={{ backgroundColor: "black" }}
+      >
         {" "}
+        {/* Adjust Nav links to right */}
         <Toolbar sx={{ backgroundColor: "black" }}>
           <IconButton
-            aria-label="open drawer"
-            edge="start"
             onClick={handleDrawerToggle}
             sx={{
               flexGrow: -1,
-              backgroundColor: "black",
               color: "white",
-              marginLeft: 'auto',
+              marginLeft: "auto",
               display: { md: "none" },
             }}
           >
-            <MenuIcon sx={{ fontSize: 50, margin: '10px 10px 5px 10px' }} />
+            <MenuIcon sx={{ fontSize: 45 }} />
           </IconButton>
 
+          {/* My name in the top left of every page */}
           <Typography
             component="div"
             sx={{
               flex: 1,
-              display: {
-                xs: "none",
-                md: "block",
-                fontSize: "35px",
-                fontWeight: "bold"
-              },
+              display: { xs: "none", md: "block", fontSize: "25px" },
             }}
           >
             Jonathan's Portfolio
           </Typography>
 
+          {/* Navbar links styling */}
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <Button>
               <Navbar
@@ -99,6 +104,7 @@ function Main(props) {
         </Toolbar>
       </AppBar>
 
+      {/* Navbar that comes from clicking 3 lines */}
       <Box component="Drawer">
         {" "}
         <Drawer
@@ -107,13 +113,9 @@ function Main(props) {
           anchor="right"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
           sx={{
             display: { xs: "block", md: "none" },
             "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
               width: drawerWidth,
             },
           }}
