@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/updated-react-portfolio/static/css/main.dbc439f2.css",
+    "main.js": "/updated-react-portfolio/static/js/main.564f5f9f.js",
+    "static/media/barista.png": "/updated-react-portfolio/static/media/barista.2652988dfdf7096e5f5d.png",
+    "static/media/proPic.jpeg": "/updated-react-portfolio/static/media/proPic.df0c3d38b9730c4c9b59.jpeg",
+    "static/media/island.png": "/updated-react-portfolio/static/media/island.a5a21f64329c0421014f.png",
+    "static/media/jonathan-resume.png": "/updated-react-portfolio/static/media/jonathan-resume.efbc5bb67f747c1b16dc.png",
+    "static/media/medium.png": "/updated-react-portfolio/static/media/medium.a3610c58d1d1eaee954e.png",
+    "static/media/memomates.png": "/updated-react-portfolio/static/media/memomates.7b569ecbbde50d562e3e.png",
+    "static/media/notes-page.png": "/updated-react-portfolio/static/media/notes-page.bc1bf2ada5c330a36ec0.png",
+    "static/media/tech-tonic.png": "/updated-react-portfolio/static/media/tech-tonic.2b6979c5ada3de68544e.png",
+    "static/media/jate-deployed.png": "/updated-react-portfolio/static/media/jate-deployed.6228ee789fc19cd9a8c8.png",
+    "static/media/linkedin.png": "/updated-react-portfolio/static/media/linkedin.2f0b5dc4ec88f9336d9f.png",
+    "static/media/test-knowledge.png": "/updated-react-portfolio/static/media/test-knowledge.397d0df8dcb4ff6a20d8.png",
+    "static/media/github.svg": "/updated-react-portfolio/static/media/github.df2540c63270ba9e655f8c445c037e8c.svg",
+    "index.html": "/updated-react-portfolio/index.html",
+    "main.dbc439f2.css.map": "/updated-react-portfolio/static/css/main.dbc439f2.css.map",
+    "main.564f5f9f.js.map": "/updated-react-portfolio/static/js/main.564f5f9f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbc439f2.css",
+    "static/js/main.564f5f9f.js"
+  ]
+}
