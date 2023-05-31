@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Project = () => {
+const Portfolio = () => {
     const [projects] = useState([
       {
         name: "barista",
@@ -32,4 +32,4 @@ return (
   );
 };
 
-export default Project;
+export default Portfolio;
