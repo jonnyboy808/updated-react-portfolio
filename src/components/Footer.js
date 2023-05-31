@@ -1,50 +1,31 @@
 import React from "react";
-import Octocat from "../assets/images/octocat-icon.svg";
+import Github from "../assets/images/github.svg";
 import LinkedIn from "../assets/images/linkedin.png";
 import Medium from "../assets/images/medium.png";
 
-// FOOTER COMPONENT
+// renders the icons of the footer with links to open new tabs
 function Footer() {
   return (
     <footer>
       <div>
         <ul>
-          <li id="octo">
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={Octocat}
-                alt={"Clickable GitHub icon that opens my GitHub profile."}
-                width="62px"
-              />
+          <li id="github">
+            <a href="https://github.com/jonnyboy808" target="_blank" rel="noreferrer">
+              <img src={Github} alt={"GitHub icon that directs to profile."}
+                width="62px"/>
             </a>
           </li>
           <li id="linked">
             <a
-              href="https://www.linkedin.com/in/jonny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={LinkedIn}
-                alt={"Clickable LinkedIn icon that opens my LinkedIn profile."}
-                width="90px"
-              />
+              href="https://www.linkedin.com/in/jonathan-b-/" target="_blank" rel="noreferrer">
+              <img src={LinkedIn} alt={"LinkedIn icon that directs to profile."}
+                width="90px"/>
             </a>
           </li>
           <li id="stack">
-            <a
-              href="https://medium.com"
-              target="_blank"
-              rel="noreferrer">
-              <img
-                src={Medium}
-                alt={"Clickable Stack Medium icon that directs to profile."}
+            <a href="https://medium.com/@jonny-b" target="_blank" rel="noreferrer">
+              <img src={Medium} alt={"Clickable Stack Medium icon that directs to profile."}
                 width="52px"
-              
               />
             </a>
           </li>
