@@ -24,7 +24,7 @@ function Resume() {
       <div>
         <h2>Resume</h2>
         <div>
-          <a href="https://drive.google.com/" target="_blank" rel="noreferrer">
+          <a href="https://drive.google.com/file/d/1SjH-WjHUKi9NLEmgSixZPLKzpEQcyts7/view?usp=sharing" target="_blank" rel="noreferrer">
             <img
               src={jResume}
               alt={"Screen capture of the front page of my resume."}
