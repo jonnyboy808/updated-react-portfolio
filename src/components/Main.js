@@ -15,7 +15,7 @@ import MenuIcon from "@mui/icons-material/MenuRounded";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 
-const drawerWidth = 190;
+const drawerElWidth = 190;
 
 // set up for  appbar 
 function Main(props) {
@@ -23,22 +23,18 @@ function Main(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { pages = [], setCurrentPage, currentPage } = props;
 
-  const handleDrawerToggle = () => {
+  const drawerEl = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  // Navbar 
+  
+  // Navbar menu popup
+  // pop back navbar menu
   const drawer = (
     <Box
-      onClick={handleDrawerToggle}
-      // pop back navbar menu
-      sx={{
-        textAlign: "center",
-        backgroundColor: "black",
-      }}
-    >
-      <Typography variant="h6" sx={{ my: 2, fontWeight: "bold" }}>
-        MENU
+    onClick={drawerEl}
+    sx={{ textAlign: "center", backgroundColor: "black" }}>
+      <Typography variant="h4" sx={{ my: 3, fontWeight: "bold", color: "white", textDecoration: "underline" }}>
+        Menu
       </Typography>
       <List sx={{ textAlign: "center" }}>
         <ListItem>
@@ -47,47 +43,30 @@ function Main(props) {
               pages={pages}
               setCurrentPage={setCurrentPage}
               currentPage={currentPage}
-            />
+              />
           </ListItemButton>
         </ListItem>
       </List>
     </Box>
   );
-
+  
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
   // Navbar styling
   return (
     <Box posistion="fixed">
-      <AppBar
-        component="Navbar"
-        elevation={0}
-        sx={{ backgroundColor: "black" }}
-      >
-        {" "}
-        {/* Adjust Nav links to right */}
+      <AppBar component="Navbar">
         <Toolbar sx={{ backgroundColor: "black" }}>
           <IconButton
-            onClick={handleDrawerToggle}
-            sx={{
-              flexGrow: -1,
-              color: "white",
-              marginLeft: "auto",
-              display: { md: "none" },
-            }}
-          >
-            <MenuIcon sx={{ fontSize: 45 }} />
+            onClick={drawerEl}
+            sx={{ color: "rgba(150, 38, 254, 0.928)", display: { md: "none" } }}>
+            <MenuIcon  sx={{ fontSize: 45 }} />
           </IconButton>
 
           {/* My name in the top left of every page */}
           <Typography
-            component="div"
-            sx={{
-              flex: 1,
-              display: { xs: "none", md: "block", fontSize: "25px" },
-            }}
-          >
+            sx={{ flex: 1,  fontSize: "25px"  }}>
             Jonathan's Portfolio
           </Typography>
 
@@ -110,13 +89,11 @@ function Main(props) {
         <Drawer
           container={container}
           variant="temporary"
-          anchor="right"
           open={mobileOpen}
-          onClose={handleDrawerToggle}
-          sx={{
-            display: { xs: "block", md: "none" },
+          onClose={drawerEl}
+          sx={{ display: { xs: "block", md: "none" },
             "& .MuiDrawer-paper": {
-              width: drawerWidth,
+              width: drawerElWidth,
             },
           }}
         >

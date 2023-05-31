@@ -24,9 +24,6 @@ function App() {
     <section className="hero">
         <div className="hero-name">
           <p>Jonathan Borroel</p>
-          <div className="hero-text">
-            <p>Test</p>
-          </div>
         </div>
       </section>
       <main>
