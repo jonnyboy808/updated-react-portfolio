@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
-import Footer from "./components/Footer";
-import Page from "./components/Page";
 import Main from "./components/Main";
+import Page from "./components/Page";
+import Footer from "./components/Footer";
 
 function App() {
   const [pages] = useState([

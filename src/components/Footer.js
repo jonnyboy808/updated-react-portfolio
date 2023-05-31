@@ -32,7 +32,7 @@ function Footer() {
         </ul>
       </div>
       <div>
-        <p>&copy; Copyright 2023 by Jonathan Borroel</p>
+        <p>&copy; Copyright 2023 Borroel</p>
       </div>
     </footer>
   );
