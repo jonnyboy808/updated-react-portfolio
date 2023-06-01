@@ -5,7 +5,7 @@
 
 ## Links
 
-[JATE deployed site](https://fierce-refuge-54485.herokuapp.com)
+[Visit my portfolio](https://jonnyboy808.github.io/updated-react-portfolio/)
 
 ## Table of Contents
 
@@ -29,13 +29,12 @@ No installation required, simply visit the repo link above.
 Below is an example of code to help render an Icon used with Mui for react
 ```JS
 // Mui being used to create the IconButton with added styling
-    <Box posistion="fixed">
+  <Box dock="fixed">
       <AppBar component="Navbar">
         <Toolbar sx={{ backgroundColor: "black" }}>
           <IconButton
             onClick={drawerEl}
-            sx={{ color: "rgba(150, 38, 254, 0.928)", display: { md: "none" } }}
-          >
+            sx={{ color: "rgba(150, 38, 254, 0.928)", display: { md: "none" } }}>
             <MenuIcon sx={{ fontSize: 45 }} />
           </IconButton>
 ```
