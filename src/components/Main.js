@@ -16,7 +16,6 @@ import Button from "@mui/material/Button";
 
 // set up for  appbar
 function Main(props) {
-  const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { pages = [], setCurrentPage, currentPage } = props;
 
@@ -29,17 +28,10 @@ function Main(props) {
   const drawer = (
     <Box
       onClick={drawerEl}
-      sx={{ textAlign: "center", backgroundColor: "black" }}
-    >
+      sx={{ textAlign: "center", backgroundColor: "black" }}>
       <Typography
         variant="h4"
-        sx={{
-          my: 3,
-          fontWeight: "bold",
-          color: "white",
-          textDecoration: "underline",
-        }}
-      >
+        sx={{my: 3, fontWeight: "bold", color: "white", textDecoration: "underline", }}>
         Menu
       </Typography>
       <List sx={{ textAlign: "center" }}>
@@ -48,26 +40,21 @@ function Main(props) {
             <Navbar
               pages={pages}
               setCurrentPage={setCurrentPage}
-              currentPage={currentPage}
-            />
+              currentPage={currentPage}/>
           </ListItemButton>
         </ListItem>
       </List>
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
   // Navbar styling
   return (
-    <Box posistion="fixed">
+    <Box dock="fixed">
       <AppBar component="Navbar">
         <Toolbar sx={{ backgroundColor: "black" }}>
           <IconButton
             onClick={drawerEl}
-            sx={{ color: "rgba(150, 38, 254, 0.928)", display: { md: "none" } }}
-          >
+            sx={{ color: "rgba(150, 38, 254, 0.928)", display: { md: "none" } }}>
             <MenuIcon sx={{ fontSize: 45 }} />
           </IconButton>
 
@@ -82,8 +69,7 @@ function Main(props) {
               <Navbar
                 pages={pages}
                 setCurrentPage={setCurrentPage}
-                currentPage={currentPage}
-              />
+                currentPage={currentPage}/>
             </Button>
           </Box>
         </Toolbar>
@@ -93,17 +79,9 @@ function Main(props) {
       <Box component="Drawer">
         {" "}
         <Drawer
-          container={container}
-          variant="temporary"
           open={mobileOpen}
           onClose={drawerEl}
-          sx={{
-            display: { xs: "block", md: "none" },
-            "& .MuiDrawer-paper": {
-              width: drawerElWidth,
-            },
-          }}
-        >
+          sx={{ display: { xs: "block", md: "none" }, "& .MuiDrawer-paper": { width: drawerElWidth } }}>
           {drawer}
         </Drawer>
       </Box>

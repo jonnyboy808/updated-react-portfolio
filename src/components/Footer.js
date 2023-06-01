@@ -22,9 +22,9 @@ function Footer() {
                 width="90px"/>
             </a>
           </li>
-          <li id="stack">
+          <li id="medium">
             <a href="https://medium.com/@jonny-b" target="_blank" rel="noreferrer">
-              <img src={Medium} alt={"Clickable Stack Medium icon that directs to profile."}
+              <img src={Medium} alt={"Medium icon that directs to profile."}
                 width="52px"
               />
             </a>

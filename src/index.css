@@ -102,22 +102,22 @@ nav ul li:hover {
 .sections {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 50px 30px;
-  margin: 15px;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  padding: 15px 60px;
+  margin: 18px;
 }
 
 .sections h2 {
-  border-right: 5px solid var(--secondary-color);
-  font-size: 32px;
-  padding: 20px;
+  border-bottom: 5px solid var(--secondary-color);
+  display: flex;
+  font-size: 38px;
+  padding: 10px;
+  justify-content: center;
   margin: 10px;
   flex: 10%;
-  display: flex;
-  justify-content: center;
 }
 
 .section-content {
@@ -248,7 +248,6 @@ nav ul li:hover {
   flex-grow: 3;
 }
 
-/* .contact button:hover, */
 .contact button:focus {
   box-shadow: inset 6em 0 0 0 var(--primary-color);
   border: 1px solid white;
@@ -466,9 +465,9 @@ footer a {
     margin: 0;
   }
   
-  .sections {
+  /* .sections {
     padding: 20px 30px;
-  }
+  } */
   
   .work {
     padding: 20px 30px;
