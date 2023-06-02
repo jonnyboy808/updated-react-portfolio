@@ -41,7 +41,7 @@ function Form() {
   }
   // input box
   return (
-    <section className="sections contact">
+    <section class="sections contact">
       <h2>Contact Me</h2>
       <form id="contact-form" onSubmit={submit}>
         <div>
@@ -61,7 +61,7 @@ function Form() {
 
         {errorMessage && (
           <div>
-            <p className="error-text">{errorMessage}</p>
+            <p class="error-text">{errorMessage}</p>
           </div>)}
         <button type="submit">Submit</button>
       </form>

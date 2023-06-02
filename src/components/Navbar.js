@@ -1,14 +1,14 @@
 import React from "react";
 
 function Navbar(props) {
-    const { pages = [], setCurrentPage, currentPage } = props;
+    const { menuItem = [], setCurrentPage, currentPage } = props;
 
     return (
       <nav>
         <ul>
-          {pages.map((Page) => (
+          {menuItem.map((Page) => (
             <li
-              className={`${ currentPage.name === Page.name && "navActive"}`} key={Page.name} >
+              class={`${ currentPage.name === Page.name && "navActive"}`} key={Page.name} >
               <span onClick={() => { setCurrentPage(Page); }}>
                 {Page.name}
               </span>

@@ -1,37 +1,38 @@
 import React, { useState } from "react";
 import "./App.css";
-import Main from "./components/Main";
+import Header from "./components/Header";
 import Page from "./components/Page";
 import Footer from "./components/Footer";
 
+// Used guidance from module 19 exercise #10-Stu_Component & #26-Stu_Testing
 function App() {
-  const [pages] = useState([
+  const [menuItem] = useState([
     { name: "About Me" },
     { name: "Portfolio" },
     { name: "Contact" },
     { name: "Resume" },
   ]);
-  const [currentPage, setCurrentPage] = useState(pages[0]);
+  const [currentPage, setCurrentPage] = useState(menuItem[0]);
   const [pageSelected, setPageSelected] = useState(false);
 
+  // returns the sections above and splits the UI section
   return (
     <div>
-      <Main
-        pages={pages}
+      <Header
+        menuItem={menuItem}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
         pageSelected={pageSelected}
         setPageSelected={setPageSelected}/>
-      <section className="hero">
-        <div className="hero-name">
+      <section class="hero">
+        <div class="hero-name">
           <p>Jonathan Borroel</p>
         </div>
       </section>
-
       <main>
         <Page currentPage={currentPage} />
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
