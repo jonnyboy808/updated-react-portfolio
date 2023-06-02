@@ -1,20 +1,10 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-// using mui for react styling
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import AppBar from "@mui/material/AppBar";
-import Typography from "@mui/material/Typography";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import MenuIcon from "@mui/icons-material/MenuRounded";
-import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
+import { Drawer, Box, AppBar, Typography, ListItem, ListItemButton, IconButton, List, Toolbar, Button } from "@mui/material";
+import MenuRounded from "@mui/icons-material/MenuRounded";
 
-// set up for  appbar
+// set up for appbar
 function Main(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { menuItem = [], setCurrentPage, currentPage } = props;
@@ -23,14 +13,12 @@ function Main(props) {
     setMobileOpen(!mobileOpen);
   };
 
-  // Navbar menu popup
+  // Navbar menu popup parentEL
   // pop back navbar menu
   const drawer = (
-    <Box
-      onClick={drawerEl}
+    <Box onClick={drawerEl}
       sx={{ textAlign: "center", backgroundColor: "black" }}>
-      <Typography
-        variant="h4"
+      <Typography variant="h4"
         sx={{my: 3, fontWeight: "bold", color: "white", textDecoration: "underline", }}>
         Menu
       </Typography>
@@ -52,10 +40,9 @@ function Main(props) {
     <Box dock="fixed">
       <AppBar component="Navbar">
         <Toolbar sx={{ backgroundColor: "black" }}>
-          <IconButton
-            onClick={drawerEl}
+          <IconButton onClick={drawerEl}
             sx={{ color: "rgba(150, 38, 254, 0.928)", display: { md: "none" } }}>
-            <MenuIcon sx={{ fontSize: 45 }} />
+            <MenuRounded sx={{ fontSize: 45 }} />
           </IconButton>
 
           {/* My name in the top left of every page */}
@@ -77,12 +64,9 @@ function Main(props) {
 
       {/* Navbar that comes from clicking 3 lines */}
       <Box component="Drawer">
-        {" "}
-        <Drawer
-          open={mobileOpen}
-          onClose={drawerEl}
+        <Drawer open={mobileOpen} onClose={drawerEl}
           sx={{ display: { xs: "block", md: "none" }, "& .MuiDrawer-paper": { width: drawerElWidth } }}>
-          {drawer}
+            {drawer}
         </Drawer>
       </Box>
     </Box>
