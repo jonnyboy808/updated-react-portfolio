@@ -48,17 +48,17 @@ const Portfolio = () => {
 
   return (
     <section class="sections work">
-      <h2 class="work-h2tag">My Projects</h2>
-      {projects.map((project, i) => (
+      <h2 class="work">My Projects</h2>
+      {projects.map((project) => (
         <div class="wrapper">
-          <div class="container" key={i}>
+          <div class="container" >
             <a href={project.deployedLink} target="_blank" rel="noreferrer">
               <img src={project.imgAsset} alt={project.name} />
             </a>
             <div class="text-block">
               {project.name}
               <br />
-              <a href={project.repoLink} target="_blank" rel="noreferrer">Visit the GitHub Repo</a>
+              <a href={project.repoLink} target="_blank" rel="noreferrer">Click here for repo link</a>
             </div>
           </div>
         </div>
