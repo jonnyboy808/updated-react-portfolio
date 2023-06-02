@@ -8,10 +8,7 @@ import MenuRounded from "@mui/icons-material/MenuRounded";
 function Main(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { menuItem = [], setCurrentPage, currentPage } = props;
-
-  const drawerEl = () => {
-    setMobileOpen(!mobileOpen);
-  };
+  const drawerEl = () => { setMobileOpen(!mobileOpen) };
 
   // Navbar menu popup parentEL
   // pop back navbar menu
