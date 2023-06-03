@@ -47,15 +47,15 @@ const Portfolio = () => {
   ]);
 
   return (
-    <section class="sections work">
-      <h2 class="work">My Projects</h2>
+    <section className="sections work">
+      <h2 className="work">My Projects</h2>
       {projects.map((project) => (
-        <div class="wrapper">
-          <div class="container" >
+        <div className="wrapper">
+          <div className="container" >
             <a href={project.deployedLink} target="_blank" rel="noreferrer">
               <img src={project.imgAsset} alt={project.name} />
             </a>
-            <div class="text-block">
+            <div className="text-block">
               {project.name}
               <br />
               <a href={project.repoLink} target="_blank" rel="noreferrer">Click here for repo link</a>

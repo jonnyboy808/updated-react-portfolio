@@ -3,7 +3,7 @@ import resume from "../assets/images/for-portfolio.png";
 
 function Resume() {
   return (
-    <div class="sections resume">
+    <div className="sections resume">
       <div>
         <h2>Resume</h2>
         <div>
@@ -14,7 +14,7 @@ function Resume() {
       </div>
       <div>
         <h2>Skills</h2>
-        <ul class="section-content">
+        <ul className="section-content">
           <li>React</li>
           <li>Javascript</li>
           <li>Node.js</li>

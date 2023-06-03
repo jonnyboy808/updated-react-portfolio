@@ -8,7 +8,7 @@ function Navbar(props) {
         <ul>
           {menuItem.map((Page) => (
             <li
-              class={`${ currentPage.name === Page.name && "navActive"}`} key={Page.name} >
+              className={`${ currentPage.name === Page.name && "navActive"}`} key={Page.name} >
               <span onClick={() => { setCurrentPage(Page); }}>
                 {Page.name}
               </span>

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { validateEmail } from "../utils/helpers";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 //used guidance from unit 19 Module 16 'react forms'
 function Form() {
@@ -45,24 +47,45 @@ function Form() {
       <h2>Contact Me</h2>
       <form id="contact-form" onSubmit={submit}>
         <div>
-          <label>Name:</label>
-          <input type="text" name="name" defaultValue={name} onBlur={input}/>
+          <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { m: 1, width: "25ch" },
+            }}
+            noValidate
+          >
+            <TextField
+              id="outlined-basic"
+              name="name"
+              label="Name"
+              variant="outlined"
+              defaultValue={name}
+              onBlur={input}
+            />
+            <TextField
+              id="outlined-basic"
+              name="email"
+              label="Email"
+              variant="outlined"
+              defaultValue={email}
+              onBlur={input}
+            />
+            <TextField
+              id="outlined-multiline-static"
+              label="Message"
+              name="message"
+              multiline
+              rows={4}
+              defaultValue={message}
+              onBlur={input}
+            />
+          </Box>
         </div>
-
-        <div>
-          <label>Email Address:</label>
-          <input type="email" name="email" defaultValue={email} onBlur={input}/>
-        </div>
-
-        <div>
-          <label>Message:</label>
-          <textarea name="message" rows="6" defaultValue={message} onBlur={input}/>
-        </div>
-
         {errorMessage && (
           <div>
             <p class="error-text">{errorMessage}</p>
-          </div>)}
+          </div>
+        )}
         <button type="submit">Submit</button>
       </form>
     </section>

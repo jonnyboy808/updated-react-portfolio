@@ -24,8 +24,8 @@ function App() {
         currentPage={currentPage}
         pageSelected={pageSelected}
         setPageSelected={setPageSelected}/>
-      <section class="hero">
-        <div class="hero-name">
+      <section className="hero">
+        <div className="hero-name">
           <p>Jonathan Borroel</p>
         </div>
       </section>
